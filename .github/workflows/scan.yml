@@ -1,0 +1,97 @@
+name: Amazon reviews scan
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Amazon reviews via OpenWeb Ninja
+        env:
+          OPENWEBNINJA_KEY: ${{ secrets.OPENWEBNINJA_KEY }}
+        run: |
+          set -uo pipefail
+
+          # ASIN activos en tracked_products (Supabase, proyecto VULKKANO MKT).
+          # Si se añaden/quitan productos rastreados hay que actualizar esta lista a mano.
+          ASINS=(
+            B0GC7F88ND B0GC83XQNL B0C85L5WY8 B0HHJJQGHD B0C823NPZY B0C821VHF7
+            B0C8238XNZ B0CZNXX615 B0HHJS9FW4 B0FNRV2QP8 B0FNX58MZP B0FDGKC68L
+            B0HHJMLHP8 B0GSGKGB96 B0FDGDN7SG B09XHMJN4F B0DCNMHB5D B0FKHLK43H
+          )
+
+          # marketplace (nuestro código) : país API : nombre país en español
+          MARKET_CODES=(ES DE FR IT UK NL BE PL SE IE)
+          API_CODES=(ES DE FR IT GB NL BE PL SE IE)
+          COUNTRY_NAMES=("España" "Alemania" "Francia" "Italia" "Reino Unido" "Países Bajos" "Bélgica" "Polonia" "Suecia" "Irlanda")
+
+          mkdir -p data
+          BATCH_FILE=$(mktemp)
+          echo "[]" > "$BATCH_FILE"
+
+          ok=0
+          fail=0
+
+          for asin in "${ASINS[@]}"; do
+            for i in "${!MARKET_CODES[@]}"; do
+              marketplace="${MARKET_CODES[$i]}"
+              api_country="${API_CODES[$i]}"
+              country="${COUNTRY_NAMES[$i]}"
+
+              resp=$(curl -sS --max-time 20 \
+                -H "x-api-key: ${OPENWEBNINJA_KEY}" \
+                "https://api.openwebninja.com/realtime-amazon-data/product-reviews?asin=${asin}&country=${api_country}" \
+                || echo '{}')
+
+              mapped=$(echo "$resp" | jq -c --arg asin "$asin" --arg marketplace "$marketplace" --arg country "$country" '
+                [ (.data.reviews // [])[] | {
+                    asin: $asin,
+                    marketplace: $marketplace,
+                    review_id: .review_id,
+                    title: .review_title,
+                    body: .review_comment,
+                    rating: .review_star_rating,
+                    review_date_raw: .review_date,
+                    country: $country,
+                    reviewer_name: .review_author,
+                    verified_purchase: .is_verified_purchase,
+                    review_link: .review_link,
+                    is_vine: .is_vine
+                  }
+                ]' 2>/dev/null)
+
+              if [ -z "$mapped" ]; then
+                echo "FAIL asin=$asin marketplace=$marketplace"
+                fail=$((fail+1))
+                continue
+              fi
+
+              tmp=$(mktemp)
+              jq -c --argjson batch "$mapped" '. + $batch' "$BATCH_FILE" > "$tmp" && mv "$tmp" "$BATCH_FILE"
+              ok=$((ok+1))
+              sleep 0.2
+            done
+          done
+
+          echo "combinaciones ok=$ok fail=$fail"
+
+          jq -n --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" --slurpfile reviews "$BATCH_FILE" \
+            '{checkedAt: $ts, reviews: $reviews[0]}' > data/amazon-reviews.json
+
+          echo "total reviews en el JSON: $(jq '.reviews | length' data/amazon-reviews.json)"
+
+      - name: Commit results
+        run: |
+          git config user.name "vulkkano-amazon-reviews-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/amazon-reviews.json
+          git diff --cached --quiet && echo "Sin cambios" || git commit -m "Actualiza reseñas de Amazon $(date -u +%F)"
+          git push
