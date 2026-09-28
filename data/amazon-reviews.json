@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-27T14:18:32Z",
+  "checkedAt": "2026-09-28T09:27:43Z",
   "reviews": [
     {
       "asin": "B0GC7F88ND",
@@ -1371,34 +1371,6 @@
       "reviewer_name": "Tom J",
       "verified_purchase": true,
       "review_link": "https://www.amazon.pl/gp/customer-reviews/R282E3H6BDLRBQ",
-      "is_vine": false
-    },
-    {
-      "asin": "B0C85L5WY8",
-      "marketplace": "SE",
-      "review_id": "R29B1W9EC62AQG",
-      "title": "Jätte bra högtalare",
-      "body": "Mycket bra högtalare",
-      "rating": "5",
-      "review_date_raw": "Granskad i Sverige den 28 december 2025",
-      "country": "Suecia",
-      "reviewer_name": "Edmon talya",
-      "verified_purchase": true,
-      "review_link": "https://www.amazon.se/gp/customer-reviews/R29B1W9EC62AQG",
-      "is_vine": false
-    },
-    {
-      "asin": "B0C85L5WY8",
-      "marketplace": "SE",
-      "review_id": "RD7WTC7RDBA5L",
-      "title": "WOW!!",
-      "body": "God value for money.",
-      "rating": "4",
-      "review_date_raw": "Granskad i Sverige den 1 februari 2025",
-      "country": "Suecia",
-      "reviewer_name": "Bertil Forsen",
-      "verified_purchase": true,
-      "review_link": "https://www.amazon.se/gp/customer-reviews/RD7WTC7RDBA5L",
       "is_vine": false
     },
     {
@@ -6150,20 +6122,6 @@
     {
       "asin": "B0DCNMHB5D",
       "marketplace": "IT",
-      "review_id": "RLOIZB4TK8MX2",
-      "title": "OTTIMO SUB",
-      "body": "Ottimo prodotto, molto potente e bello esteticamente, arrivato entro i tempi previsti, ben imballato.",
-      "rating": "5",
-      "review_date_raw": "Recensito in Italia il 11 febbraio 2026",
-      "country": "Italia",
-      "reviewer_name": "Raster",
-      "verified_purchase": true,
-      "review_link": "https://www.amazon.it/gp/customer-reviews/RLOIZB4TK8MX2",
-      "is_vine": false
-    },
-    {
-      "asin": "B0DCNMHB5D",
-      "marketplace": "IT",
       "review_id": "R7YIBJ6BRSLLQ",
       "title": "Un subwoofer di qualità incredibile",
       "body": "Dopo anni di onorato servizio il mio subwoofer vintage di un noto brand ha deciso di abbandonarmi , dato che per la riparazione mi è stata proposta una cifra molto alta (giustificata dal valore del sub stesso) ho optato per questo modello sempre da 10” e che dire ? Impressionante … oggi è il primo giorno di prova ma se continua così … vi assicuro che è di una potenza e qualità assurda (stanza di medie dimensioni ma apparato audio di altissima qualità)Si configura subito … chiaramente poi farò una calibratura adeguata ma già lasciando a frequenza intermedia e volume medio dimostra che è ben costruitoEstetica minimale ed elegante , fa la sua spartana figura e si nota subito un bel tocco di eleganzaProvato sia con film bluray 4k in dolby atmos , dts ecc … console varie e multimedia (varie app streaming)Eccezionale la resa in tutte le mie prove e per il prezzo pagato di meglio non credo si possa trovareArrivato con protezione eccelsa , manuale di istruzioni anche in italiano , cavo audio all interno della scatola di lunghezza media (non corto)Consegna perfettaPs aggiungo solo una piccola nota personale … questo subwoofer è molto potente per ottenere un risultato ottimale bisogna aggiustare sia la frequenza che il volume in base alle dimensioni della camera e dell’impianto audio da voi posseduto … le critiche sulla aggressività del suono non le ritengo adeguate al prodotto perché vi assicuro che dopo una attenta calibratura il risultato da me raggiunto è al di sopra di ogni aspettativa (in considerazione al rapporto qualità prezzo dove la qualità in questo caso è ECCELSA)",
@@ -6178,15 +6136,29 @@
     {
       "asin": "B0DCNMHB5D",
       "marketplace": "IT",
-      "review_id": "R8H99R5UK3J3N",
-      "title": "Soddisfatto",
-      "body": "Il subwoofer è costruito con materiali di ottima qualità, trovo si abbini benissimo all’impianto audio che avevo già. Lo consiglio.",
+      "review_id": "R2KBABJV1PTLIA",
+      "title": "Potenza ad un prezzo sostenibile",
+      "body": "Molto potente nonostante il prezzo, funziona bene a basso ed alto volume. Nulla che dire un ottimo subwoofer",
       "rating": "5",
-      "review_date_raw": "Recensito in Italia il 17 maggio 2026",
+      "review_date_raw": "Recensito in Italia il 30 novembre 2025",
       "country": "Italia",
-      "reviewer_name": "Alessandra",
+      "reviewer_name": "gian31",
       "verified_purchase": true,
-      "review_link": "https://www.amazon.it/gp/customer-reviews/R8H99R5UK3J3N",
+      "review_link": "https://www.amazon.it/gp/customer-reviews/R2KBABJV1PTLIA",
+      "is_vine": false
+    },
+    {
+      "asin": "B0DCNMHB5D",
+      "marketplace": "IT",
+      "review_id": "R3CZ58NB9G6UI0",
+      "title": "Qualità prezzo ottimi",
+      "body": null,
+      "rating": "3",
+      "review_date_raw": "Recensito in Italia il 28 settembre 2025",
+      "country": "Italia",
+      "reviewer_name": "Cliente Amazon",
+      "verified_purchase": true,
+      "review_link": "https://www.amazon.it/gp/customer-reviews/R3CZ58NB9G6UI0",
       "is_vine": false
     },
     {
