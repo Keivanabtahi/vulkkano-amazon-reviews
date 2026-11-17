@@ -93,6 +93,11 @@ def call(params):
                 return data, ""
         except urllib.error.HTTPError as e:
             last = f"HTTP {e.code}"
+            if e.code != 404:
+                try:
+                    last += " " + e.read().decode("utf-8", "replace")[:200].replace("\n", " ")
+                except Exception:
+                    pass
             if e.code not in (429, 500, 502, 503, 504):
                 break
         except Exception as e:  # timeouts, JSON corrupto...
@@ -164,6 +169,13 @@ def main():
                 if err == "HTTP 404":
                     not_listed.append(f"{asin} {mk}")  # el ASIN no se vende en ese Amazon
                     break
+                if err and cookie and pages == 1:
+                    # Con cookie, la API responde 503 (no 404) para fichas que no existen en ese
+                    # Amazon. Una llamada sin cookie lo aclara.
+                    _, err2 = call({"asin": asin, "country": api_country})
+                    if err2 == "HTTP 404":
+                        not_listed.append(f"{asin} {mk}")
+                        break
                 if err:
                     errors.append(f"{asin} {mk} p{pages}: {err}")
                     break
