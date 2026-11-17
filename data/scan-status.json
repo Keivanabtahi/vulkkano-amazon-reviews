@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-17T12:58:09Z",
+  "checkedAt": "2026-11-17T13:10:22Z",
   "markets_with_cookie": [
     "ES",
     "DE",
@@ -11,13 +11,13 @@
   "exported": 981,
   "stored_total": 981,
   "by_market": {
-    "FR": {
-      "calls": 1,
+    "UK": {
+      "calls": 2,
       "new": 0
     }
   },
-  "not_listed": [],
-  "errors": [
-    "B0FDGKC68L FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"399783f7-883e-42bb-ae7b-f77d9613f31f\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}"
-  ]
+  "not_listed": [
+    "B0GC83XQNL UK"
+  ],
+  "errors": []
 }
