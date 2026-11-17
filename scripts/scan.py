@@ -145,6 +145,7 @@ def main():
         del store[key]  # limpia las de otros países que se colaron antes de este filtro
     errors, stats, not_listed = [], {}, []
     market_seen = {}  # por marketplace: ¿algún cursor? y máximo de valoraciones de una ficha
+    dead_cookie = set()  # marketplaces cuya cookie ha rechazado Amazon en esta ejecución
     with_cookie = [mk for mk, _, _ in MARKETS if os.environ.get(f"AMAZON_COOKIE_{mk}", "").strip()]
     print(f"Marketplaces con cookie: {', '.join(with_cookie) or 'ninguno'} · max_pages={MAX_PAGES} backfill={BACKFILL}")
 
@@ -156,7 +157,7 @@ def main():
                 continue
             if mk in WEEKLY_MARKETS and now.weekday() != 0 and not BACKFILL:
                 continue
-            cookie = os.environ.get(f"AMAZON_COOKIE_{mk}", "").strip()
+            cookie = "" if mk in dead_cookie else os.environ.get(f"AMAZON_COOKIE_{mk}", "").strip()
             params = {"asin": asin, "country": api_country}
             if cookie:
                 params.update(cookie=cookie, sort_by="MOST_RECENT")
@@ -171,11 +172,17 @@ def main():
                     break
                 if err and cookie and pages == 1:
                     # Con cookie, la API responde 503 (no 404) para fichas que no existen en ese
-                    # Amazon. Una llamada sin cookie lo aclara.
-                    _, err2 = call({"asin": asin, "country": api_country})
+                    # Amazon, y 400 "different cookie" si Amazon ha anulado la sesión (amazon.fr
+                    # lo hace tras ~10 consultas). Repetimos sin cookie: aclara el 404 y, si la
+                    # cookie ha muerto, al menos guardamos las reseñas destacadas como antes.
+                    if "different cookie" in err:
+                        dead_cookie.add(mk)  # no la usamos más en esta ejecución
+                    data2, err2 = call({"asin": asin, "country": api_country})
                     if err2 == "HTTP 404":
                         not_listed.append(f"{asin} {mk}")
                         break
+                    if not err2 and mk in dead_cookie:
+                        data, err, cookie = data2, "", ""
                 if err:
                     errors.append(f"{asin} {mk} p{pages}: {err}")
                     break
@@ -207,7 +214,11 @@ def main():
 
     # Con cookie válida, las fichas con muchas valoraciones devuelven cursor. Si en todo un
     # marketplace no ha salido ninguno, Amazon nos ha tratado como anónimos: cookie caducada.
+    for mk in sorted(dead_cookie):
+        errors.append(f"{mk}: Amazon ha rechazado la cookie; se han usado las reseñas destacadas sin cookie. Renovar AMAZON_COOKIE_{mk}")
     for mk in with_cookie:
+        if mk in dead_cookie:
+            continue
         m = market_seen.get(mk)
         if m and not m["cursor"] and m["max_ratings"] > 40:
             errors.append(f"{mk}: ninguna ficha devolvió cursor con cookie — probablemente caducada, renovar AMAZON_COOKIE_{mk}")
