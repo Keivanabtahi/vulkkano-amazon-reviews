@@ -17,6 +17,9 @@ on:
       only_asins:
         description: 'Solo estos ASIN, separados por comas (vacío = todos). Para pruebas.'
         default: ''
+      only_markets:
+        description: 'Solo estos marketplaces, p. ej. UK,ES (vacío = todos). Para cargas iniciales de un país.'
+        default: ''
 
 permissions:
   contents: write
@@ -50,6 +53,7 @@ jobs:
           BACKFILL: ${{ inputs.backfill }}
           MAX_PAGES: ${{ inputs.max_pages }}
           ONLY_ASINS: ${{ inputs.only_asins }}
+          ONLY_MARKETS: ${{ inputs.only_markets }}
         run: python3 scripts/scan.py
 
       - name: Commit results
