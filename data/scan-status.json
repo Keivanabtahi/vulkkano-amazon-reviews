@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-11-17T10:47:06Z",
+  "markets_with_cookie": [
+    "DE"
+  ],
+  "new_reviews": 14,
+  "exported": 472,
+  "stored_total": 472,
+  "by_market": {
+    "ES": {
+      "calls": 3,
+      "new": 0
+    },
+    "DE": {
+      "calls": 3,
+      "new": 14
+    },
+    "FR": {
+      "calls": 3,
+      "new": 0
+    },
+    "IT": {
+      "calls": 3,
+      "new": 0
+    },
+    "UK": {
+      "calls": 3,
+      "new": 0
+    },
+    "NL": {
+      "calls": 3,
+      "new": 0
+    },
+    "BE": {
+      "calls": 3,
+      "new": 0
+    },
+    "PL": {
+      "calls": 3,
+      "new": 0
+    },
+    "SE": {
+      "calls": 3,
+      "new": 0
+    },
+    "IE": {
+      "calls": 3,
+      "new": 0
+    }
+  },
+  "not_listed": [],
+  "errors": []
+}
