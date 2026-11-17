@@ -1,91 +1,30 @@
 {
-  "checkedAt": "2026-11-17T12:19:34Z",
+  "checkedAt": "2026-11-17T12:59:02Z",
   "markets_with_cookie": [
     "ES",
     "DE",
     "FR",
-    "IT"
+    "IT",
+    "UK"
   ],
-  "new_reviews": 362,
+  "new_reviews": 0,
   "exported": 981,
   "stored_total": 981,
   "by_market": {
-    "ES": {
-      "calls": 47,
-      "new": 151
-    },
-    "DE": {
-      "calls": 44,
-      "new": 62
-    },
-    "FR": {
-      "calls": 25,
-      "new": 0
-    },
-    "IT": {
-      "calls": 51,
-      "new": 149
-    },
     "UK": {
-      "calls": 25,
-      "new": 0
-    },
-    "NL": {
-      "calls": 25,
-      "new": 0
-    },
-    "BE": {
-      "calls": 25,
-      "new": 0
-    },
-    "PL": {
-      "calls": 25,
-      "new": 0
-    },
-    "SE": {
-      "calls": 25,
-      "new": 0
-    },
-    "IE": {
       "calls": 25,
       "new": 0
     }
   },
-  "not_listed": [
-    "B0GC83XQNL UK",
-    "B0HHJJQGHD UK",
-    "B0HHJS9FW4 UK",
-    "B0HHJMLHP8 UK",
-    "B0HHJDFM7X UK",
-    "B0HHJF41XS UK",
-    "B0HHJDPL6Z UK",
-    "B0HHJ9DKMQ UK"
-  ],
+  "not_listed": [],
   "errors": [
-    "B0GC7F88ND FR p1: HTTP 400",
-    "B0GC83XQNL FR p1: HTTP 400",
-    "B0C85L5WY8 FR p1: HTTP 400",
-    "B0HHJJQGHD FR p1: HTTP 400",
-    "B0C823NPZY FR p1: HTTP 400",
-    "B0C821VHF7 FR p1: HTTP 400",
-    "B0C8238XNZ FR p1: HTTP 400",
-    "B0CZNXX615 FR p1: HTTP 400",
-    "B0HHJS9FW4 FR p1: HTTP 400",
-    "B0FNRV2QP8 FR p1: HTTP 400",
-    "B0FNX58MZP FR p1: HTTP 400",
-    "B0FDGKC68L FR p1: HTTP 400",
-    "B0HHJMLHP8 FR p1: HTTP 400",
-    "B0GSGKGB96 FR p1: HTTP 400",
-    "B0FDGDN7SG FR p1: HTTP 400",
-    "B09XHMJN4F FR p1: HTTP 400",
-    "B0DCNMHB5D FR p1: HTTP 400",
-    "B0FKHLK43H FR p1: HTTP 400",
-    "B0HHJLT2BB FR p1: HTTP 400",
-    "B0HHJHLFKM FR p1: HTTP 400",
-    "B0HNW3Z45H FR p1: HTTP 400",
-    "B0HHJDFM7X FR p1: HTTP 400",
-    "B0HHJF41XS FR p1: HTTP 400",
-    "B0HHJDPL6Z FR p1: HTTP 400",
-    "B0HHJ9DKMQ FR p1: HTTP 400"
+    "B0GC83XQNL UK p1: HTTP 503",
+    "B0HHJJQGHD UK p1: HTTP 503",
+    "B0HHJS9FW4 UK p1: HTTP 503",
+    "B0HHJMLHP8 UK p1: HTTP 503",
+    "B0HHJDFM7X UK p1: HTTP 503",
+    "B0HHJF41XS UK p1: HTTP 503",
+    "B0HHJDPL6Z UK p1: HTTP 503",
+    "B0HHJ9DKMQ UK p1: HTTP 503"
   ]
 }
