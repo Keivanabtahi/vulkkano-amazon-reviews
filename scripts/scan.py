@@ -41,6 +41,20 @@ MARKETS = [
     ("IE", "IE", "Irlanda"),
 ]
 
+# Cuando una ficha tiene pocas reseñas locales, Amazon (con sesión iniciada) añade al final
+# reseñas de otros países ("Recensito in Spagna il ..."). Son duplicados de otros
+# marketplaces: solo nos quedamos con las que mencionan el país propio en la fecha.
+LOCAL = {
+    "ES": ["España"], "DE": ["Deutschland"], "FR": ["France"], "IT": ["Italia"],
+    "UK": ["United Kingdom"], "NL": ["Nederland"], "BE": ["België", "Belgique", "Belgium"],
+    "PL": ["Polsce"], "SE": ["Sverige"], "IE": ["Ireland"],
+}
+
+
+def is_local(review_date, mk):
+    return not review_date or any(t in review_date for t in LOCAL[mk])
+
+
 STORE = "data/reviews-store.json"
 RELAY = "data/amazon-reviews.json"
 STATUS = "data/scan-status.json"
@@ -113,6 +127,8 @@ def load_store():
 
 def main():
     store = load_store()
+    for key in [k for k, r in store.items() if not is_local(r.get("review_date_raw"), r["marketplace"])]:
+        del store[key]  # limpia las de otros países que se colaron antes de este filtro
     errors, stats, not_listed = [], {}, []
     market_seen = {}  # por marketplace: ¿algún cursor? y máximo de valoraciones de una ficha
     with_cookie = [mk for mk, _, _ in MARKETS if os.environ.get(f"AMAZON_COOKIE_{mk}", "").strip()]
@@ -140,9 +156,12 @@ def main():
                     break
                 d = data.get("data") or {}
                 reviews = d.get("reviews") or []
-                hit_known = False
+                hit_known = foreign = False
                 for r in reviews:
                     if not r.get("review_id"):
+                        continue
+                    if not is_local(r.get("review_date"), mk):
+                        foreign = True  # a partir de aquí ya no quedan reseñas locales
                         continue
                     key = f"{mk}:{r['review_id']}"
                     if key in store:
@@ -154,7 +173,7 @@ def main():
                 m = market_seen.setdefault(mk, {"cursor": False, "max_ratings": 0})
                 m["cursor"] |= bool(cursor)
                 m["max_ratings"] = max(m["max_ratings"], d.get("total_ratings") or 0)
-                if not cookie or not cursor or pages >= MAX_PAGES or (hit_known and not BACKFILL):
+                if not cookie or not cursor or foreign or pages >= MAX_PAGES or (hit_known and not BACKFILL):
                     break
                 time.sleep(0.3)
             s = stats.setdefault(mk, {"calls": 0, "new": 0})
