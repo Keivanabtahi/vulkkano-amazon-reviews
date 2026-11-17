@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-17T13:10:22Z",
+  "checkedAt": "2026-11-17T12:59:02Z",
   "markets_with_cookie": [
     "ES",
     "DE",
@@ -12,12 +12,19 @@
   "stored_total": 981,
   "by_market": {
     "UK": {
-      "calls": 2,
+      "calls": 25,
       "new": 0
     }
   },
-  "not_listed": [
-    "B0GC83XQNL UK"
-  ],
-  "errors": []
+  "not_listed": [],
+  "errors": [
+    "B0GC83XQNL UK p1: HTTP 503",
+    "B0HHJJQGHD UK p1: HTTP 503",
+    "B0HHJS9FW4 UK p1: HTTP 503",
+    "B0HHJMLHP8 UK p1: HTTP 503",
+    "B0HHJDFM7X UK p1: HTTP 503",
+    "B0HHJF41XS UK p1: HTTP 503",
+    "B0HHJDPL6Z UK p1: HTTP 503",
+    "B0HHJ9DKMQ UK p1: HTTP 503"
+  ]
 }
