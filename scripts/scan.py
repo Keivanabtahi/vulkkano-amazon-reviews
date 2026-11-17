@@ -67,7 +67,11 @@ STATUS = "data/scan-status.json"
 KEY = os.environ["OPENWEBNINJA_KEY"]
 MAX_PAGES = int(os.environ.get("MAX_PAGES") or 3)
 BACKFILL = (os.environ.get("BACKFILL") or "").lower() == "true"
+# El scan corre lunes, miércoles y viernes. Estos marketplaces (pocas reseñas, sin cookie)
+# solo se consultan los lunes (o en una carga inicial) para no gastar llamadas.
+WEEKLY_MARKETS = {"NL", "BE", "PL", "SE", "IE"}
 EXPORT_DAYS = int(os.environ.get("EXPORT_DAYS") or 60)
+ONLY_MK = {m.strip().upper() for m in (os.environ.get("ONLY_MARKETS") or "").split(",") if m.strip()}
 ONLY = {a.strip() for a in (os.environ.get("ONLY_ASINS") or "").split(",") if a.strip()}
 
 now = datetime.now(timezone.utc)
@@ -143,6 +147,10 @@ def main():
         if ONLY and asin not in ONLY:
             continue
         for mk, api_country, country in MARKETS:
+            if ONLY_MK and mk not in ONLY_MK:
+                continue
+            if mk in WEEKLY_MARKETS and now.weekday() != 0 and not BACKFILL:
+                continue
             cookie = os.environ.get(f"AMAZON_COOKIE_{mk}", "").strip()
             params = {"asin": asin, "country": api_country}
             if cookie:

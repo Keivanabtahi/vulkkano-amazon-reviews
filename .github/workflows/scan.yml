@@ -1,8 +1,9 @@
 name: Amazon reviews scan
 
 on:
-  schedule:
-    - cron: '0 3 * * 1'
+  # Sin cron: GitHub arranca los programados con 5-7 h de retraso. Lo lanza la rutina de Claude
+  # "Pipeline reseñas Vulkkano" (lunes, miércoles y viernes, 05:00 UTC) vía API con un token
+  # fine-grained, y después importa a Supabase y refresca el dashboard.
   workflow_dispatch:
     inputs:
       backfill:
@@ -14,6 +15,9 @@ on:
         default: '3'
       only_asins:
         description: 'Solo estos ASIN, separados por comas (vacío = todos). Para pruebas.'
+        default: ''
+      only_markets:
+        description: 'Solo estos marketplaces, p. ej. UK,ES (vacío = todos). Para cargas iniciales de un país.'
         default: ''
 
 permissions:
@@ -48,6 +52,7 @@ jobs:
           BACKFILL: ${{ inputs.backfill }}
           MAX_PAGES: ${{ inputs.max_pages }}
           ONLY_ASINS: ${{ inputs.only_asins }}
+          ONLY_MARKETS: ${{ inputs.only_markets }}
         run: python3 scripts/scan.py
 
       - name: Commit results
