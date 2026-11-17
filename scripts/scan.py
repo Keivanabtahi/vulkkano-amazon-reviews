@@ -169,6 +169,13 @@ def main():
                 if err == "HTTP 404":
                     not_listed.append(f"{asin} {mk}")  # el ASIN no se vende en ese Amazon
                     break
+                if err and cookie and pages == 1:
+                    # Con cookie, la API responde 503 (no 404) para fichas que no existen en ese
+                    # Amazon. Una llamada sin cookie lo aclara.
+                    _, err2 = call({"asin": asin, "country": api_country})
+                    if err2 == "HTTP 404":
+                        not_listed.append(f"{asin} {mk}")
+                        break
                 if err:
                     errors.append(f"{asin} {mk} p{pages}: {err}")
                     break
