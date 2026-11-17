@@ -31,6 +31,11 @@ ASINS = [
     "B0GC7F88ND", "B0GC83XQNL", "B0C85L5WY8", "B0HHJJQGHD", "B0C823NPZY", "B0C821VHF7",
     "B0C8238XNZ", "B0CZNXX615", "B0HHJS9FW4", "B0FNRV2QP8", "B0FNX58MZP", "B0FDGKC68L",
     "B0HHJMLHP8", "B0GSGKGB96", "B0FDGDN7SG", "B09XHMJN4F", "B0DCNMHB5D", "B0FKHLK43H",
+    # Añadidos 2026-11-17
+    "B0HHJLT2BB", "B0HHJHLFKM",  # DESK blanco, negro
+    "B0HNW3Z45H",                # SUB8s
+    "B0HHJDFM7X", "B0HHJF41XS",  # TD10BT blanco, marrón
+    "B0HHJDPL6Z", "B0HHJ9DKMQ",  # A6 ARC MKII marrón, blanco
 ]
 
 # (código nuestro, país para la API, nombre en español)
