@@ -93,6 +93,11 @@ def call(params):
                 return data, ""
         except urllib.error.HTTPError as e:
             last = f"HTTP {e.code}"
+            if e.code != 404:
+                try:
+                    last += " " + e.read().decode("utf-8", "replace")[:200].replace("\n", " ")
+                except Exception:
+                    pass
             if e.code not in (429, 500, 502, 503, 504):
                 break
         except Exception as e:  # timeouts, JSON corrupto...
