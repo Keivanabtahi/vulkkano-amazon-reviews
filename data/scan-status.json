@@ -1,54 +1,59 @@
 {
-  "checkedAt": "2026-11-17T11:59:59Z",
+  "checkedAt": "2026-11-17T12:04:22Z",
   "markets_with_cookie": [
+    "ES",
     "DE",
+    "FR",
     "IT"
   ],
-  "new_reviews": 0,
-  "exported": 542,
-  "stored_total": 542,
+  "new_reviews": 77,
+  "exported": 619,
+  "stored_total": 619,
   "by_market": {
     "ES": {
-      "calls": 1,
-      "new": 0
+      "calls": 5,
+      "new": 13
     },
     "DE": {
-      "calls": 1,
-      "new": 0
+      "calls": 6,
+      "new": 21
     },
     "FR": {
-      "calls": 1,
-      "new": 0
+      "calls": 5,
+      "new": 13
     },
     "IT": {
-      "calls": 2,
-      "new": 0
+      "calls": 6,
+      "new": 30
     },
     "UK": {
-      "calls": 1,
+      "calls": 4,
       "new": 0
     },
     "NL": {
-      "calls": 1,
+      "calls": 4,
       "new": 0
     },
     "BE": {
-      "calls": 1,
+      "calls": 4,
       "new": 0
     },
     "PL": {
-      "calls": 1,
+      "calls": 4,
       "new": 0
     },
     "SE": {
-      "calls": 1,
+      "calls": 4,
       "new": 0
     },
     "IE": {
-      "calls": 1,
+      "calls": 4,
       "new": 0
     }
   },
-  "not_listed": [],
+  "not_listed": [
+    "B0GC83XQNL UK",
+    "B0HHJDPL6Z UK"
+  ],
   "errors": []
 }
