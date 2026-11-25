@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-23T05:09:27Z",
+  "checkedAt": "2026-11-25T05:09:35Z",
   "markets_with_cookie": [
     "ES",
     "DE",
@@ -7,17 +7,17 @@
     "IT",
     "UK"
   ],
-  "new_reviews": 8,
-  "exported": 1018,
-  "stored_total": 1018,
+  "new_reviews": 5,
+  "exported": 1023,
+  "stored_total": 1023,
   "by_market": {
     "ES": {
       "calls": 25,
-      "new": 3
+      "new": 2
     },
     "DE": {
       "calls": 25,
-      "new": 3
+      "new": 1
     },
     "FR": {
       "calls": 25,
@@ -25,29 +25,9 @@
     },
     "IT": {
       "calls": 25,
-      "new": 1
+      "new": 2
     },
     "UK": {
-      "calls": 25,
-      "new": 0
-    },
-    "NL": {
-      "calls": 25,
-      "new": 0
-    },
-    "BE": {
-      "calls": 25,
-      "new": 1
-    },
-    "PL": {
-      "calls": 25,
-      "new": 0
-    },
-    "SE": {
-      "calls": 25,
-      "new": 0
-    },
-    "IE": {
       "calls": 25,
       "new": 0
     }
@@ -63,30 +43,30 @@
     "B0HHJ9DKMQ UK"
   ],
   "errors": [
-    "B0GC7F88ND FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"bb921b8a-99d1-4e4f-9dec-b9fd62a63890\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0GC83XQNL FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"26db9f05-ca45-4fb7-ad53-fc58682980e0\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0C85L5WY8 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"5323ca4d-4a05-458d-a628-911440369edd\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0HHJJQGHD FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"8836daf8-b864-4259-a599-86373b0ccc0c\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0C823NPZY FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"6520a3fb-a32f-4f72-a8f3-63f3783d6387\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0C821VHF7 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"adbf2c2c-9b44-4fe6-ad4f-f01153f43772\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0C8238XNZ FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"bd333c23-e3d3-4029-bcaf-c164bdfe5b52\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0CZNXX615 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"b3f19934-df27-44dc-8264-ea2a94a8d9a8\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0HHJS9FW4 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"33d52fd7-dd1a-44cb-bc7d-88f65cae1bf1\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0FNRV2QP8 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"e8e393f8-e2e6-4617-940a-dfcadb23383d\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0FNX58MZP FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"d56d94e7-2e77-425b-b0bf-4280bceab213\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0FDGKC68L FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"db19a375-6eb0-4bf1-90a2-71ad79234805\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0HHJMLHP8 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"672f1126-94b7-4e44-abc5-fe3112557d7b\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0GSGKGB96 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"c947f63d-c385-4af0-970a-1e35e5b13977\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0FDGDN7SG FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"a38b6d0e-67b5-4f83-8947-fd9cf46ef04e\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B09XHMJN4F FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"86a33673-e926-464a-a48b-bae4c1820c0e\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0DCNMHB5D FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"5373c9f9-536f-403a-8642-33030e228c68\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0FKHLK43H FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"3677e555-b010-4844-97a5-7d0a9854da52\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0HHJLT2BB FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"cb82471a-34a0-45b5-9a73-a0d5986338dc\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0HHJHLFKM FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"1be21aa4-2ecb-416b-b4ff-e0f00f383b26\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0HNW3Z45H FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"c50305df-5315-45c2-bd98-29b1789f2877\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0HHJDFM7X FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"b773974a-30a9-4fe1-ae2f-5339acd5f1f4\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0HHJF41XS FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"cc631c92-03ca-410f-96ea-aebe8319ca0b\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0HHJDPL6Z FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"c632e1fa-b02c-43b0-b7b5-8b9b0f0831b6\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
-    "B0HHJ9DKMQ FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"631df7cc-00d7-4dcd-a68e-10a678f22109\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}"
+    "B0GC7F88ND FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"8566372f-97c6-4a4e-b828-72412c1ccb2e\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0GC83XQNL FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"efe54906-7635-4134-95d9-04815f6e084b\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0C85L5WY8 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"9fb2a610-4ad0-41bd-91cc-74eef6e2025a\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0HHJJQGHD FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"d0b432a9-fa04-4e0a-b35c-66a00fa6ea72\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0C823NPZY FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"4d26fd1c-5e2f-4471-b51e-a3afc6c20e52\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0C821VHF7 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"b51cd5da-8939-44b8-8177-73d90160e3b2\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0C8238XNZ FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"059bf96e-eac0-47ef-828a-e0c469a21950\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0CZNXX615 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"52e19c1a-7312-4856-b207-2e447e3a8904\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0HHJS9FW4 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"5c2da75a-a70c-4452-b231-6bb7b8a5f5d4\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0FNRV2QP8 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"e1f323b4-3071-49a2-aa52-bf44dce8271d\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0FNX58MZP FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"aeb89786-89f8-4b76-a5be-f20b00ef8074\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0FDGKC68L FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"0595154c-1160-458a-8f1c-3b9d92f85b72\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0HHJMLHP8 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"ff76e29d-6e51-4195-af49-4b67304ee7b3\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0GSGKGB96 FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"1b0388c3-c0f6-4dfc-955c-618e56a1ad20\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0FDGDN7SG FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"3c7ad0a3-7547-4c3b-866f-caa1cede166e\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B09XHMJN4F FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"9127788a-a28c-41f8-9a64-c56d7ca0c8df\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0DCNMHB5D FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"cfdefd47-63c8-4fec-919a-21c203ebf6d2\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0FKHLK43H FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"e22607c6-6311-4ff2-a454-aa71dcd6b3ca\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0HHJLT2BB FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"97da0104-0e0d-4666-af1f-112576f2cad6\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0HHJHLFKM FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"4dc40977-a62b-4ffb-a62b-a0f066e56b81\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0HNW3Z45H FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"2dea8a49-027c-4331-a175-c807e8789b65\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0HHJDFM7X FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"7952cdb8-36e9-4a36-a647-0e8c0e98c76a\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0HHJF41XS FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"2acfde7b-7433-4b1e-b1fb-712c0485f528\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0HHJDPL6Z FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"088d28fb-95b8-4ab0-a668-8d9dc590d172\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}",
+    "B0HHJ9DKMQ FR p1: HTTP 400 {\"status\":\"ERROR\",\"request_id\":\"0df37966-f183-42ed-b3a9-74fe3c16d454\",\"error\":{\"message\":\"Error fetching reviews, please try again with a different cookie.\",\"code\":400}}"
   ]
 }
